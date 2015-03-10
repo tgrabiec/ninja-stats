@@ -2,7 +2,6 @@
 
 STATS_FILE=~/.ninja-stats/stats
 if [ ! -e $STATS_FILE ]; then
-	echo "[INFO] Creating statistics file in $STATS_FILE"
 	mkdir -p ~/.ninja-stats
 	touch $STATS_FILE
 fi
