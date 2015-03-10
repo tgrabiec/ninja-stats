@@ -19,6 +19,5 @@ cxx_count=$(grep "\] CXX" $LOG_FILE | wc -l)
 error=$(grep "subcommand failed" $LOG_FILE | wc -l)
 echo "[INFO] Compiled $cxx_count files in $duration seconds (error=${error})"
 echo "${start},${duration},${error},${cxx_count},$(date +%Y-%m-%d:%H:%M:%S),$(pwd)" >> $STATS_FILE
-
 rm $LOG_FILE
-exit $code
+exit $error
